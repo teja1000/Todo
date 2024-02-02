@@ -1,7 +1,7 @@
 const zod = require("zod");
 const createTodo=z.object({
-  title:z.string(),
-  description:z.string()
+  title:z.string().min(1),
+  description:z.string().min(1)
 
 })
 
@@ -13,6 +13,6 @@ const updateTodo=z.object({
 module.exports={
   createTodo:createTodo,
   updateTodo:updateTodo
-
+  
 
 }
