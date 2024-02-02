@@ -4,7 +4,10 @@ mongoose.connect(mongodb+srv://dolovely678:<password>@cluster0.d1nkkfx.mongodb.n
 const Todoschema=mongoose.Schema({
   title:String,
   description:String,
-  completed:Boolean
+  completed:{
+    type:Boolean,
+    default:false
+  }
 })
 
 const todo=mongoose.model('todos',Todoschema);
